@@ -7,13 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banana speak</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fuzzy+Bubbles&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
+        :root {
+            --primary-color: #f2c94c
+        }
+
+        body {
+            font-family: 'Fuzzy Bubbles', cursive;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            height: 15vh;
+            text-align: center;
+            background-color: var(--primary-color);
+        }
+
+        .heading {
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
         textarea {
+            font-size: 1rem;
+            font-weight: bold;
             width: 90%;
             height: 20vh;
-            margin: 1rem;
+            margin: 2rem;
             display: block;
             padding: 1rem;
+            font-family: 'Fuzzy Bubbles', cursive;
         }
 
         #output-box {
@@ -21,8 +52,31 @@
             height: 20vh;
             width: 90%;
             border: 2px solid black;
-            margin: 1rem;
+            margin-left: 2rem;
+            margin-top: 1rem;
             padding: 1rem;
+        }
+
+        #translate-btn {
+            font-family: 'Fuzzy Bubbles', cursive;
+            background-color: var(--primary-color);
+            width: 15%;
+            height: 8vh;
+            display: block;
+            margin: auto;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .output-heading {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            margin-top: 1.5rem;
+            background-color: var(--primary-color);
+            text-align: center;
         }
     </style>
 
@@ -30,14 +84,20 @@
 
 <body>
 
-    <h1>talk banana</h1>
+    <nav>
+        <div class="heading">talk banana</div>
+    </nav>
 
-    <textarea id="text-area" placeholder="Enter your sentence and we will translate in banana">fsdfsd</textarea>
+    <textarea id="text-area" placeholder="Enter your sentence and we will translate in banana"></textarea>
 
     <button id="translate-btn">Translate</button>
 
-    <div style="font-size: larger">Translated output will come here 👇👇</div>
+
+    <div class="output-heading" style="font-size: larger">Translated output will come here 👇👇</div>
     <div id="output-box"></div>
+
+    <footer>Made with ❤️‍🔥 by Sahil Chhabra</footer>
+
 </body>
 
 <script src="./app.js"></script>
